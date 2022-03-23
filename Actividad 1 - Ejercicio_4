@@ -1,0 +1,45 @@
+package paquete;
+
+import java.util.Scanner;
+
+public class Ejercico_3 {
+
+    /*EJERCICIO 4 
+Crear un programa que permita cargar dos  
+números enteros por teclado, y nos  
+devuelva el cociente y residuo de la división  
+del primero con el segundo. 
+Ten en cuenta alguna forma de evitar el  
+error de la división entre 0 
+     */
+    public static void main(String[] args) {
+
+        int num1;
+        int num2;
+
+        int cociente = 0; //Es el resultado de la division
+        int residuo = 0; //Es el sobrante de la division
+
+        Scanner usu = new Scanner(System.in);
+
+        System.out.println("Ingrese un numero: ");
+        num1 = usu.nextInt();
+
+        System.out.println("Ingrese un numero: ");
+        num2 = usu.nextInt();
+
+        if (num2 != 0) {
+            cociente = num1 / num2;
+            residuo = num1 % num2;
+             System.out.println("El cociente de la division es: " + cociente);
+        System.out.println("El residuo de la division es: " + residuo);
+            
+        }else{
+            System.out.println("No se puede dividir entre 0");
+        }
+
+       
+
+    }
+
+}
