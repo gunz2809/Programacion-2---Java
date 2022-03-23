@@ -1,0 +1,54 @@
+package paquete;
+
+import java.util.Scanner;
+
+public class Ejercico_3 {
+
+    /*EJERCICIO 4 
+Crear un programa que permita cargar dos  
+números enteros por teclado, y nos  
+devuelva el cociente y residuo de la división  
+del primero con el segundo. 
+Ten en cuenta alguna forma de evitar el  
+error de la división entre 0 
+     */
+    public static void main(String[] args) {
+
+        /*EJERCICIO 5 
+Realizar un programa que despliegue un menú con las siguientes opciones y realice las siguientes  operaciones: 
+∙ Cargar 10 enteros. 
+∙ Devolver la suma de 10 enteros cargados. 
+∙ Salir (el programa solo debe salir si se pulso esta opción). */
+        
+  
+    
+        Scanner usu = new Scanner(System.in);
+        int num;
+        int suma = 0;
+        int opcion;
+        
+
+      
+        for(int i=0; i<10; i++){
+            
+            
+            System.out.println("Ingrese un numero: ");
+            num = usu.nextInt();
+            
+            suma = suma +num;
+        }
+
+        
+        System.out.println("La suma de los numeros ingresados es: " +suma);
+        
+        
+      
+        
+        
+        
+        
+    }
+
+}
+
+
