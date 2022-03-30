@@ -1,0 +1,47 @@
+package javaapplication9;
+
+import java.util.Scanner;
+
+public class Ejercicio_6 {
+
+    public static void main(String[] args) {
+
+        /*EJERCICIO 8
+Vamos a realizar un juego que sea adivinar el número. Para eso, generaremos un número de forma
+randomica (sin mostrarlo) entre 0 y 100.
+        
+Luego, el usuario debe ingresar de a un número, y el programa le responderá:
+ En caso de que nuestro número sea menor: “Estas por debajo”
+ En caso de que el número sea mayor: “Estas por encima”
+ Si el número es igual: “Acertaste”
+        
+Dos opciones para realizar Random:
+int randNum = (int)(Math.random()*100);
+Random rand = new Random();
+int RandNum = rand.nextInt(10);
+        
+Una vez resuelto esto, agrega que al finalizar (cuando el usuario acertó), nos diga cuantos intentos tuvo hasta
+acertar.*/
+        int randNum = (int) (Math.random() * 100);
+        int num = 0;
+
+        Scanner usu = new Scanner(System.in);
+
+        System.out.println(randNum);
+
+        do {
+
+            System.out.println("Ingrese un numero del 0 al 100: ");
+            num = usu.nextInt();
+
+            if (num < randNum) {
+                System.out.println("Estas por debajo");
+            } else if (num > randNum) {
+                System.out.println("Estas por encima");
+            } else if (num == randNum) {
+                System.out.println("¡¡¡ACERTASTES!!!");
+            }
+
+        } while (num != randNum);
+    }
+}
