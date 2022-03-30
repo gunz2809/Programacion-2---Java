@@ -1,0 +1,66 @@
+package javaapplication9;
+
+import java.util.Scanner;
+
+public class Ejercicio_6 {
+
+    public static void main(String[] args) {
+
+        /*EJERCICIO 6
+ Crear un programa que haga la conversión de dólares a pesos
+ Crear un programa que le agregue el IVA (22%) a un valor dado.
+ Crear un programa que permita convertir una cantidad de segundos en horas, minutos y segundos.*/
+        int num = 0;
+        int pesos;
+        int dolares;
+        int programa = 0;
+        int hor, min, seg;
+
+        double cotizacion = 0;
+        double iva;
+
+        Scanner usu = new Scanner(System.in);
+
+        System.out.println("Ingrese una opcion:"
+                + "opcion 1 = conversion de dolares a pesos"
+                + "opcion 2 = Calcular iva sobre un monto dado"
+                + "opcion 3 = Convertir una cantidad de segundos en horas, minutos y segundos ");
+        programa = usu.nextInt();
+
+        switch (programa) {
+
+            case 1:
+                System.out.println("Ingrese un monto en dolares: ");
+                num = usu.nextInt();
+
+                cotizacion = num * 0.024;
+
+                System.out.println("La conversion de dolares a pesos es: " + cotizacion);
+                break;
+
+            case 2:
+                System.out.println("Ingrese un monto: ");
+                num = usu.nextInt();
+
+                iva = num * 1.22;
+
+                System.out.println("El iva sobre el valor dado es: " + iva);
+
+                break;
+
+            case 3:
+                System.out.println("Ingrese los segundos deseados: ");
+                num = usu.nextInt();
+
+                hor = num / 3600;
+                min = (num - (3600 * hor)) / 60;
+                seg = num - ((hor * 3600) + (min * 60));
+
+                System.out.println("La conversion de los segundos ingresados en horas es: " + hor + " en minutos es: " + min + " en segundo es: " + seg);
+
+                break;
+
+        }
+
+    }
+}
