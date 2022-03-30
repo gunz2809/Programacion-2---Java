@@ -1,0 +1,34 @@
+package javaapplication9;
+
+import java.util.Scanner;
+
+public class Ejercicio_6 {
+
+    public static void main(String[] args) {
+
+        /*EJERCICIO 7
+Realizar un programa que pueda determinar la suma de los N primeros números positivos. El usuario debe
+pasar el número.
+Ejemplo: Si el usuario ingresa 5, debe el programa devolver 15 (1+2+3+4+5)
+Puede utilizar la formula 𝑆 =
+𝑁(𝑁+1)
+2*/
+        int num;
+        int formula;
+
+        Scanner usu = new Scanner(System.in);
+
+        System.out.println("Ingrese un numero positivo: ");
+        num = usu.nextInt();
+
+        if (num > 0) {
+
+            formula = num * (num + 1) / 2;
+
+            System.out.println("La suma del numero ingresado es: " + formula);
+        } else {
+            System.out.println("**ERROR** -- ingrese un numero positivo");
+        }
+
+    }
+}
