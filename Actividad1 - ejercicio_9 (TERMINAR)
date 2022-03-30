@@ -1,0 +1,56 @@
+package javaapplication9;
+
+import java.util.Scanner;
+
+public class Ejercicio_6 {
+
+    public static void main(String[] args) {
+
+ /*EJERCICIO 9
+Queremos realizar un programa, que al ingresar un numero nos pueda decir si es capicúa. Un número es
+capicúa cuando se “lee igual al derecho o al revés”. Por ejemplo, el número 13531 es capicúa.
+Para realizar esta comparación, un posible camino es reescribir el número al revés, para luego compararlo
+con el original. Esto obviamente no es tarea sencilla.
+Pensémoslo de esta manera:
+        
+ Supongamos que tenemos el número 143 y queremos darlo vuelta
+ Si lo divido entre 10, me dará 14 y me sobraran 3. Es decir, puedo comenzar a “separar el número”
+ El 3 que me sobro puedo multiplicarlo por 10. Obteniendo 30
+ Si repito el paso (ahora tengo 14), me quedare con el 1 y el 4. Deberé sumar el 4 a los 30 que ya tenía.
+ Ahora tengo 34, que volveré a multiplicar por 10 (340)
+ Le sumare el 1 que me quedó
+ Llegué a 341, es decir, invertí el número
+Como vemos son pasos que se repiten, y que pueden ser valederos para cualquier número de cualquier
+cantidad de cifras*/
+ 
+ 
+ Scanner usu = new Scanner(System.in);
+ int num;
+ int desglose;
+ int resto;
+ int sobra;
+ 
+ 
+        System.out.println("Ingrese un numero: ");
+        num = usu.nextInt();
+        
+        desglose = num / 10;
+        resto = num %10;
+        sobra = resto *10;
+        
+        
+        System.out.println(desglose);
+        System.out.println(resto);
+        System.out.println(sobra);
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    }
+}
