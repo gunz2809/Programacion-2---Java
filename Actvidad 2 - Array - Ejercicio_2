@@ -1,0 +1,42 @@
+package prueba_arrays;
+
+import java.util.*;
+
+public class Prueba_arrays {
+
+    public static void main(String[] args) {
+
+        /*Ejercicio 2
+ Crear un array del tipo numérico donde el tamaño del mismo sea determinado por el usuario.
+ Luego que el usuario ingrese valores hasta llenarlo.
+ Mostrar todos los valores devolviendo además la suma y el promedio de los valores del array.*/
+        Scanner usu = new Scanner(System.in);
+
+        int num = 0;
+        int tamanio;
+        int acumulador = 0;
+
+        System.out.println("Ingrese el tamaño del arreglo: ");
+        tamanio = usu.nextInt();
+        int array[] = new int[tamanio];
+
+        for (int i = 0; i < tamanio; i++) {
+            System.out.println("Ingrese numeros hasta completar el arreglo establecido: ");
+            num = usu.nextInt();
+            array[i] = num;
+
+        }
+
+        for (int i = 0; i < tamanio; i++) {
+
+            acumulador = acumulador + array[i];
+
+            System.out.println("Los numeros ingresados son: " + array[i]);
+
+        }
+        System.out.println("La suma de los valores ingresados son: " + acumulador);
+        System.out.println("El promedio de los numeros ingresados es: " + acumulador / tamanio);
+
+    }
+
+}
