@@ -1,1 +1,59 @@
+package prueba_arrays;
+
+import java.util.*;
+
+public class Prueba_arrays {
+
+    public static void main(String[] args) {
+
+        /*Ejercicio 3
+ Crear un array de 10 posiciones del tipo Integer.
+ Permitir que el usuario cargue los diez valores en el array.
+ Sumar los valores que se encuentren en las posiciones pares del array.
+ Devolver la suma.*/
+        
+        
+        Scanner usu = new Scanner (System.in);
+        
+    int array[] = new int[5];  
+    int num = 0;
+    int suma = 0;
+    int pares = 0;
+    
+    for(int i=0; i<5; i++){
+      
+        System.out.println("Ingrese un numero: ");
+        num = usu.nextInt();
+      
+    }
+    
+    for(int i=0; i<5; i++){
+        
+        suma = suma / num;
+        pares = pares %suma;
+        
+        System.out.println("Los numeros pares son: " +pares);
+        
+        
+    }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+
+}
 
