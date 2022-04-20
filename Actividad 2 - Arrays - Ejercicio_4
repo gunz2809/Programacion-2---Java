@@ -19,7 +19,7 @@ public class JavaApplication37 {
         int num = 0;
         boolean a = false;
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 9; i++) {
             System.out.println("Ingrese una posición: ");
             array[i] = usu.nextInt();
         }
@@ -27,7 +27,7 @@ public class JavaApplication37 {
         System.out.println("Ingrese un numero: ");
         num = usu.nextInt();
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 9; i++) {
             if (array[i] == num) {
                 a = true;
             } else {
