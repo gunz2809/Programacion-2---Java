@@ -1,0 +1,67 @@
+package Paquete;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class NewClass {
+
+    public static void main(String[] args) {
+
+        Scanner usu = new Scanner(System.in);
+
+        ArrayList<String> nombres = new ArrayList<String>();
+        int op = 0;
+
+        do {
+
+            System.out.println("1-Agregar nuevo");
+            System.out.println("2-Mostrar");
+            System.out.println("3-Eliminar");
+            System.out.println("4-Modificar");
+            System.out.println("0-Salir");
+
+            System.out.println("Ingrese una opcion: ");
+            op = usu.nextInt();
+
+            switch (op) {
+
+                case 1:
+                    System.out.println("Ingrese un nombre");
+                    String nom = usu.next();
+
+                    nombres.add(nom);
+                    break;
+
+                case 2:
+                    for (int i = 0; i < nombres.size(); i++) {
+                        System.out.println(nombres.get(i));
+
+                    }
+                    break;
+
+                case 3:
+                    System.out.println("Escriba el nombre que desea eliminar: ");
+                    nom = usu.next();
+
+                    nombres.remove(nom);
+
+                    break;
+
+                case 4:
+                    int pos;
+                    System.out.println("Escriba la posicion: ");
+                    pos = usu.nextInt();
+
+                    System.out.println("Ingrese el nuevo nombre de esa posicion: ");
+                    nom = usu.next();
+
+                    nombres.set(pos, nom);
+
+                    break;
+
+            }
+
+        } while (op != 0);
+
+    }
+}
