@@ -48,14 +48,15 @@ public class NewClass {
                     break;
 
                 case 4:
-                    int pos;
-                    System.out.println("Escriba la posicion: ");
-                    pos = usu.nextInt();
+                    String nom1;
+                    String nom2;
+                    System.out.println("Ingrese el nombre a modificar: ");
+                    nom1 = usu.next();
 
-                    System.out.println("Ingrese el nuevo nombre de esa posicion: ");
-                    nom = usu.next();
+                    System.out.println("Remplaza nombre: ");
+                    nom2 = usu.next();
 
-                    nombres.set(pos, nom);
+                    nombres.set(0, nom2);
 
                     break;
 
