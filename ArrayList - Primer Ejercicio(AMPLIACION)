@@ -1,0 +1,112 @@
+package javaapplication65;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class JavaApplication65 {
+
+    public static void main(String[] args) {
+
+        Scanner usu = new Scanner(System.in);
+
+        ArrayList<String> nombres = new ArrayList<String>();
+        ArrayList<String> apellidos = new ArrayList<String>();
+        ArrayList<Integer> documentos = new ArrayList<Integer>();
+        ArrayList<Integer> edad = new ArrayList<Integer>();
+
+        int op = 0;
+
+        do {
+
+            System.out.println("1-Agregar nuevo");
+            System.out.println("2-Mostrar");
+            System.out.println("3-Eliminar");
+            System.out.println("4-Modificar");
+            System.out.println("0-Salir");
+
+            System.out.println("Ingrese una opcion: ");
+            op = usu.nextInt();
+
+            switch (op) {
+
+                case 1:
+                    System.out.println("Ingrese un nombre: ");
+                    String nom = usu.next();
+
+                    System.out.println("Ingrese un apellido: ");
+                    String ape = usu.next();
+
+                    System.out.println("Ingrese su documento: ");
+                    int doc = usu.nextInt();
+
+                    System.out.println("Ingrese su edad: ");
+                    int años = usu.nextInt();
+
+                    nombres.add(nom);
+                    apellidos.add(ape);
+                    documentos.add(doc);
+                    edad.add(años);
+                    break;
+
+                case 2:
+
+                    for (int i = 0; i < nombres.size(); i++) {
+                        System.out.println("");
+                        System.out.println("************");
+                        System.out.println("Posicion: " + i);
+                        System.out.println("Nombre: " + nombres.get(i));
+                        System.out.println("Apellidos: " + apellidos.get(i));
+                        System.out.println("Documento: " + documentos.get(i));
+                        System.out.println("Edad: " + edad.get(i));
+                        System.out.println("************");
+                        System.out.println("");
+
+                    }
+
+                    break;
+
+                case 3:
+
+                    int pos;
+                    System.out.println("Ingrese la posicion que desea borrar: ");
+                    pos = usu.nextInt();
+
+                    nombres.remove(pos);
+                    apellidos.remove(pos);
+                    documentos.remove(pos);
+                    edad.remove(pos);
+
+                    break;
+
+                case 4:
+
+                    int mod_posicion;
+
+                    System.out.println("");
+                    System.out.println("************");
+                    System.out.println("Ingrese la posicion que desea modificar: ");
+                    mod_posicion = usu.nextInt();
+                    System.out.println("Ingrese nuevo nombre: ");
+                    String nom_nuevo = usu.next();
+                    System.out.println("Ingrese nuevo apellido: ");
+                    String ape_nuevo = usu.next();
+                    System.out.println("Ingrese nuevo documento: ");
+                    int documento_nuevo = usu.nextInt();
+                    System.out.println("Ingrese nueva edad: ");
+                    int edad_nueva = usu.nextInt();
+                    System.out.println("************");
+                    System.out.println("");
+
+                    nombres.set(mod_posicion, nom_nuevo);
+                    apellidos.set(mod_posicion, ape_nuevo);
+                    documentos.set(mod_posicion, documento_nuevo);
+                    edad.set(mod_posicion, edad_nueva);
+
+                    break;
+
+            }
+
+        } while (op != 0);
+
+    }
+}
