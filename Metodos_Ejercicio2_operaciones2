@@ -1,0 +1,76 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication56;
+
+import java.util.Scanner;
+
+public class operaciones2 {
+
+    Scanner usu = new Scanner(System.in);
+
+    //Vacío (void) y con parámetros
+    
+    /*
+    void suma(int num1, int num2) {
+
+        int resultado_suma = num1 + num2;
+        System.out.println("El resultado de la suma es: " + resultado_suma);
+
+    }
+
+    void resta(int num1, int num2) {
+
+        int resultado_resta = num1 - num2;
+        System.out.println("El resultado de la resta es: " + resultado_resta);
+
+    }
+
+    void multiplicacion(int num1, int num2) {
+
+        int resultado_multiplicacion = num1 * num2;
+        System.out.println("El resultado de la multplicacion: " + resultado_multiplicacion);
+
+    }
+
+    void division(int num1, int num2) {
+
+        int resultado_division = num1 / num2;
+        System.out.println("El resultado de la division es: " + resultado_division);
+
+    }
+     */
+//Con return y con parámetros
+    
+    
+    int suma(int num1, int num2) {
+
+        int resultado_suma = num1 + num2;
+        return resultado_suma;
+
+    }
+
+    int resta(int num1, int num2) {
+
+        int resultado_resta = num1 - num2;
+        return resultado_resta;
+
+    }
+
+    int multiplicacion(int num1, int num2) {
+
+        int resultado_multiplicacion = num1 * num2;
+        return resultado_multiplicacion;
+
+    }
+
+    int division(int num1, int num2) {
+
+        int resultado_division = num1 / num2;
+        return resultado_division;
+
+    }
+
+}
