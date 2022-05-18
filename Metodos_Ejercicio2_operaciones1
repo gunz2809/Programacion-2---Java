@@ -1,0 +1,80 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication56;
+
+import java.util.Scanner;
+
+public class operaciones1 {
+
+    int num1;
+    int num2;
+    int resultado_suma;
+    int resultado_resta;
+    int resultado_multiplicacion;
+    int resultado_division;
+    Scanner usu = new Scanner(System.in);
+
+  /*  void holaMundo() {
+
+        String texto;
+
+        System.out.println("Ingrese algo: ");
+        texto = usu.next();
+
+        System.out.println("Lo que ingreso fue: " + texto);
+
+    }*/
+
+    void suma() {
+
+        System.out.println("Ingrese un numero: ");
+        num1 = usu.nextInt();
+
+        System.out.println("Ingrese otro numero: ");
+        num2 = usu.nextInt();
+
+        resultado_suma = num1 + num2;
+
+        System.out.println("El resultado de la suma es: " + resultado_suma);
+    }
+
+    void resta() {
+
+        System.out.println("Ingrese un numero: ");
+        num1 = usu.nextInt();
+
+        System.out.println("Ingrese otro numero: ");
+        num2 = usu.nextInt();
+
+        resultado_resta = num1 - num2;
+        System.out.println("El resultado de la resta es: " + resultado_resta);
+    }
+
+    void multiplicacion() {
+
+        System.out.println("Ingrese un numero: ");
+        num1 = usu.nextInt();
+
+        System.out.println("Ingrese otro numero: ");
+        num2 = usu.nextInt();
+
+        resultado_multiplicacion = num1 * num2;
+        System.out.println("El resultado de la multiplicacion es: " + resultado_multiplicacion);
+    }
+
+    void division() {
+
+        System.out.println("Ingrese un numero: ");
+        num1 = usu.nextInt();
+
+        System.out.println("Ingrese otro numero: ");
+        num2 = usu.nextInt();
+        
+        resultado_division = num1 / num2;
+        System.out.println("El resultado de la division es: " + resultado_division);
+    }
+
+}
