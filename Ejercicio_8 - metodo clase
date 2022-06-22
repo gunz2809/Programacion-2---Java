@@ -1,0 +1,28 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ejercicio_8;
+
+/*Le pasamos dos datos a la función, nombre y edad. Si es mayor de edad, lo
+agregamos al ArrayList. Recordar que tenemos ya un método para la mayoría
+de edad.*/
+import java.util.*;
+
+public class metodo {
+
+    
+    
+    
+
+    boolean mayorEdad(String nombre, int edad) {
+      if (edad >= 18){
+          return true;
+      }else{
+          return false;
+      }
+
+    }
+
+}
