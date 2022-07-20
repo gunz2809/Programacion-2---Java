@@ -1,0 +1,126 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package claseconobjetos;
+
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+        Scanner usu = new Scanner(System.in);
+        
+
+        String nom;
+        String ape;
+        String sex;
+        String nac;
+        
+        int doc;
+        int ed;
+        int alt;
+        int p;
+
+        Persona per2 = new Persona(1234567,"Martin","Rodriguez","Masculino",27,190,100,"Uruguaya");
+        
+        System.out.println("Ingrese su documento: ");
+        doc = usu.nextInt();
+        
+        System.out.println("Ingrese un nombre: ");
+        nom = usu.next();
+
+        System.out.println("Ingrese un apellido: ");
+        ape = usu.next();
+
+        System.out.println("Ingrese un sexo: ");
+        sex = usu.next();
+
+        System.out.println("Ingrese un nacionalidad: ");
+        nac = usu.next();
+
+        System.out.println("Ingrese su edad: ");
+        ed = usu.nextInt();
+
+        System.out.println("Ingrese su altura: ");
+        alt = usu.nextInt();
+
+        System.out.println("Ingrese su peso: ");
+        p = usu.nextInt();
+
+        Persona per1 = new Persona(doc,nom,ape,sex,ed,alt,p,nac);
+        
+        System.out.println("");
+        System.out.println("*********************************");
+        System.out.println("*****************EMPLEADO*************");
+        System.out.println("");
+        System.out.println("Documento: " +per1.getDocumento());
+        System.out.println("Nombre: "  +per1.getNombre());
+        System.out.println("Apellido: " +per1.getApellido());
+        System.out.println("Sexo: " +per1.getSexo());
+        System.out.println("Edad: " +per1.getEdad());
+        System.out.println("Altura: " +per1.getAltura());
+        System.out.println("Peso: " +per1.getPeso());
+        System.out.println("*********************************");
+        
+        
+        //Se establecen los atributos
+        
+        per1.setDocumento(doc);
+        per1.setNombre(nom);
+        per1.setApellido(ape);
+        per1.setSexo(sex);
+        per1.setNacionalidad(nac);
+        per1.setEdad(ed);
+        per1.setAltura(alt);
+        per1.setPeso(p);
+        
+        
+        Persona imc = new Persona();
+        
+        System.out.println("Su imc es: "+per1.imc());
+        
+        Persona comparaAltura = new Persona();
+        
+        
+        
+        if( per1.comparaAltura(per2)){
+            System.out.println("El empleado_1 es mas alto que el empleado_2");
+        }else{
+            
+            System.out.println("El empleado_2 es mas alto que el empleado_1");
+            
+        }
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+/* 
+        //Aca se llaman a los atributos y se muestra en pantalla\\
+        System.out.println(per1.getDocumento())
+        System.out.println(per1.getNombre());
+        System.out.println(per1.getApellido());
+        System.out.println(per1.getSexo());
+        System.out.println(per1.getEdad());
+        System.out.println(per1.getAltura());
+        System.out.println(per1.getPeso());
+        System.out.println(per1.getNacionalidad());
+*/
+    }
+
+}
