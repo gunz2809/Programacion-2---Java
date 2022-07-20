@@ -1,0 +1,114 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package claseconobjetos;
+
+public class Persona {
+
+    private int documento;
+    private String nombre;
+    private String apellido;
+    private String sexo;
+    private int edad;
+    private int altura;
+    private int peso;
+    private String nacionalidad;
+
+    public Persona(int doc, String nom, String ape, String sex, int ed, int alt, int p, String nac) {
+
+        documento = doc;
+        nombre = nom;
+        apellido = ape;
+        sexo = sex;
+        edad = ed;
+        altura = alt;
+        peso = p;
+        nacionalidad = nac;
+
+    }
+
+    public int getDocumento() {
+        return documento;
+    }
+
+    public void setDocumento(int documento) {
+        this.documento = documento;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public int getAltura() {
+        return altura;
+    }
+
+    public void setAltura(int altura) {
+        this.altura = altura;
+    }
+
+    public int getPeso() {
+        return peso;
+    }
+
+    public void setPeso(int peso) {
+        this.peso = peso;
+    }
+
+    public String getNacionalidad() {
+        return nacionalidad;
+    }
+
+    public void setNacionalidad(String nacionalidad) {
+        this.nacionalidad = nacionalidad;
+    }
+
+    public double imc() {
+        double altura_mts = this.altura / 100;
+        double res1 = altura_mts * altura_mts;
+        double resultado = this.peso / res1;
+        return resultado;
+    }
+
+    public boolean comparaAltura(Persona OtraPersona) {
+        if (this.altura > OtraPersona.getAltura()) {
+            return true; //Este objeto es más alto que el que le pasamos
+        } else {
+            return false;
+        }
+    }
+
+    public Persona() {
+
+    }
+}
