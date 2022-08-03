@@ -1,0 +1,58 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package cuenta;
+
+/**
+ *
+ * VIVA LA GRASA :v
+ */
+public class Cuenta {
+
+    private String titular;
+    private double monto;
+
+    public Cuenta(String tit, double mon) {
+
+        titular = tit;
+        monto = mon;
+
+    }
+
+    public String getTitular() {
+        return titular;
+    }
+
+    public void setTitular(String titular) {
+        this.titular = titular;
+    }
+
+    public double getMonto() {
+        return monto;
+    }
+
+    public void setMonto(double monto) {
+        this.monto = monto;
+    }
+
+    public Cuenta() {
+
+    }
+
+    public void ingreso(double mon) {
+
+        this.monto = mon + monto;
+        
+       
+    }
+    
+    public void retiro(double mon) {
+
+        this.monto = mon - monto;
+        
+       
+    }
+
+}
