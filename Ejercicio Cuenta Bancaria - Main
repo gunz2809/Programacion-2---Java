@@ -21,6 +21,9 @@ public class main {
         String tit;
         int mon;
 
+        double mon_in;
+        double mon_ret;
+
         System.out.println("Ingrese nombre del titular: ");
         tit = usu.next();
 
@@ -29,9 +32,7 @@ public class main {
 
         Cuenta per = new Cuenta(tit, mon);
 
-        Cuenta ingresa = new Cuenta();
-        Cuenta retira = new Cuenta();
-
+        /*Creo todas las varialbes y luego creo un do while con switch case*/
         do {
             System.out.println("***Cuenta Bancaria***");
             System.out.println("");
@@ -46,36 +47,34 @@ public class main {
 
                 case 1:
 
-                    double mon_in;
-
                     System.out.println("****INGRESAR****");
-                    System.out.println("");
-                    System.out.println("Monto: " + mon);
                     System.out.println("");
                     System.out.println("Ingrese la cantidad de dinero que desea guardar: ");
                     mon_in = usu.nextDouble();
+                    per.ingreso(mon_in);
 
-                    System.out.println("");
-                    System.out.println("Monto actual: " + ingresa.getMonto());
-                    
-                    
-                    ingresa.setMonto(mon);
+                    /*Aca hago que se ingrese dinero llamando al objeto "ingreso" para que le sume al monto ingresado*/
                     break;
+
                 case 2:
-                    double mon_ret;
+
                     System.out.println("****RETIRAR****");
                     System.out.println("");
                     System.out.println("Ingrese la cantidad de dinero que desea retirar: ");
                     mon_ret = usu.nextDouble();
-
-                  
+                    per.retiro(mon_ret);
+                    /*Aca hago que se retire dinero llamando al objeto "retiro" para que le reste al monto ingresado*/
 
                     break;
 
                 case 3:
+                    System.out.println("****CONSULTA****");
+                    System.out.println("");
+                    System.out.println("Monto actual: " + per.getMonto());
 
+                /*Aca se realiza las consultas de dinero actual*/
                 case 0:
-                    System.out.println("Adios");
+                    System.out.println("Gracias por visitar  Diego's Banks, lo esperamos nuevamente.");
                     break;
 
                 default:
