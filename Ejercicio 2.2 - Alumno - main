@@ -1,0 +1,36 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package main;
+
+/**
+ *
+ * @author Estudiante
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       
+        
+        
+        Alumno alu = new Alumno();
+        System.out.println(alu);
+        System.out.println("");
+        alu.mayorEdad();
+        
+       /*CUANDO CREAMOS UN METODO Y QUEREMOS INVOCARLO TENEMOS QUE LLAMARLO CON EL NOMBRE DE LA CLASE Y EL METODO DE LA SIGUIENTE FORMA
+        EJEMPLO: alu.mayorEdad().
+        Dentro de los parametros del metodo "mayorEdad" tiene que ir vacio*/
+        
+        
+        
+        
+        
+    }
+    
+}
