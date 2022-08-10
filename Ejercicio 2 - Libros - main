@@ -1,0 +1,77 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ejercicio_2.varios;
+
+import java.util.Scanner;
+
+public class main_libros {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+
+        Scanner usu = new Scanner(System.in);
+
+        System.out.println("Ingrese el ISBN del libro: ");
+        int ci_lib = usu.nextInt();
+
+        System.out.println("Ingrese el nombre del libro: ");
+        String tit = usu.next();
+
+        System.out.println("Ingrese el autor del libro: ");
+        String aut = usu.next();
+
+        System.out.println("Ingrese el numero de paginas: ");
+        int num_pag = usu.nextInt();
+
+        Libros lib1 = new Libros(ci_lib, tit, aut, num_pag);
+        System.out.println("****DATOS DEL LIBRO 1****");
+        System.out.println("");
+        System.out.println("ISBN: " + lib1.getISBN());
+        System.out.println("Nombre del libro: " + lib1.getTitulo());
+        System.out.println("Autor: " + lib1.getAutor());
+        System.out.println("Número de páginas: " + lib1.getNumero_de_paginas());
+        System.out.println("");
+        System.out.println("************************");
+        System.out.println("");
+        System.out.println("");
+
+        System.out.println("Ingrese el ISBN del libro: ");
+        int ci_lib_2 = usu.nextInt();
+
+        System.out.println("Ingrese el nombre del libro: ");
+        String tit_2 = usu.next();
+
+        System.out.println("Ingrese el autor del libro: ");
+        String aut_2 = usu.next();
+
+        System.out.println("Ingrese el numero de paginas: ");
+        int num_pag_2 = usu.nextInt();
+
+        Libros lib2 = new Libros(ci_lib_2, tit_2, aut_2, num_pag_2);
+        System.out.println("****DATOS DEL LIBRO 2****");
+        System.out.println("");
+        System.out.println("ISBN: " + lib2.getISBN());
+        System.out.println("Nombre del libro: " + lib2.getTitulo());
+        System.out.println("Autor: " + lib2.getAutor());
+        System.out.println("Número de páginas: " + lib2.getNumero_de_paginas());
+        System.out.println("");
+        System.out.println("************************");
+        
+        
+        if (lib1.getNumero_de_paginas() > lib2.getNumero_de_paginas()) {
+            System.out.println("El libro 1 tiene más páginas");
+        } else {
+            System.out.println("El libro 2 tiene más páginas");
+            
+        }
+        
+        
+
+    }
+
+}
