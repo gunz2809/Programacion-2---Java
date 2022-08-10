@@ -43,16 +43,14 @@ public class Cuenta {
 
     public void ingreso(double mon) {
 
-        this.monto = mon + monto;
-        
-       
+        this.monto = this.monto + mon;
+
     }
-    
+
     public void retiro(double mon) {
 
-        this.monto = mon - monto;
-        
-       
+        this.monto = this.monto - mon;
+
     }
 
 }
