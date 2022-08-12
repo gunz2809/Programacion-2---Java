@@ -1,0 +1,38 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
+ */
+
+package com.mycompany.ejercicio_2_2_2;
+
+import java.util.Scanner;
+public class Ejercicio_2_2_2 {
+
+    public static void main(String[] args) {
+      
+        
+        
+        Scanner usu = new Scanner(System.in);
+        
+        String nombre;
+        double sueldo;
+        
+        System.out.println("Ingrese su nombre: ");
+        nombre = usu.next();
+        
+        System.out.println("Ingrese su sueldo: ");
+        sueldo = usu.nextDouble();
+        
+        empleado emp = new empleado(nombre,sueldo);
+        
+        emp.toString();
+        
+        emp.pagaImpuestos(sueldo);
+        
+       
+        
+        
+        
+        
+    }
+}
