@@ -1,0 +1,58 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.ejercicio_2_2_2;
+
+/**
+ *
+ * @author Diego
+ */
+public class empleado {
+    
+    private String nombre;
+    private double sueldo;
+    
+    public empleado(String nom, double suel){
+        
+        nombre = nom;
+        sueldo = suel;
+        
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public double getSueldo() {
+        return sueldo;
+    }
+
+    public void setSueldo(double sueldo) {
+        this.sueldo = sueldo;
+    }
+    
+  
+    @Override
+    public String toString(){
+        System.out.println("El empleado "+nombre+ " tiene un sueldo de "+sueldo);
+        return nombre;
+    }
+    
+    
+    public double pagaImpuestos(double imp){
+        if (imp >= 3000) {
+            System.out.println("Paga impuestos");
+        }else{
+            System.out.println("No paga impuestos");
+        }
+        
+        
+        return imp;
+    }
+    
+}
