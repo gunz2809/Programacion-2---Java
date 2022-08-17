@@ -1,0 +1,35 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication135;
+
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+
+        Scanner usu = new Scanner(System.in);
+
+        String usuario;
+        String contrasenia;
+
+        System.out.println("Ingrese su usuario: ");
+        usuario = usu.next();
+
+        System.out.println("Ingrese su contraseña: ");
+        contrasenia = usu.next();
+
+        password p = new password(usuario);
+
+        if (p.setContrasenia(contrasenia,usuario)) {
+            System.out.println("Usuario creado.");
+        } else {
+            System.out.println("Su contraseña no es valida.");
+        }
+
+    }
+
+}
